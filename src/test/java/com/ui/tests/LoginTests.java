@@ -27,4 +27,24 @@ public class LoginTests {
 				"Saswata Bhattacharya");
 	}
 
+	@Test(description = "Verifies a valid user is able to login in application", groups = { "E2E",
+			"Sanity" }, dataProviderClass = com.ui.dataproviders.LoginDataProvider.class, dataProvider = "LoginTestCSVDataProvider")
+	public void loginCSVTest(User user) {
+
+		assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress(), user.getPassword()).getUserName(),
+				"Saswata Bhattacharya");
+	}
+	
+
+	@Test(description = "Verifies a valid user is able to login in application", groups = { "E2E",
+			"Sanity" }, dataProviderClass = com.ui.dataproviders.LoginDataProvider.class, dataProvider = "LoginTestExcelDataProvider")
+	public void loginExcelTest(User user) {
+
+		assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress(), user.getPassword()).getUserName(),
+				"Saswata Bhattacharya");
+	}
+	
+	
+	
+
 }
