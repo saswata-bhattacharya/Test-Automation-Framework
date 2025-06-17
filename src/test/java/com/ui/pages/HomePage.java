@@ -17,7 +17,7 @@ public final class HomePage extends BrowserUtility{
 	public HomePage(Browser browserName) {
 		super(browserName);
 		//goToWebsite(readProperty(QA, "URL"));
-		goToWebsite(JSONUtility.readJSON(QA));
+		goToWebsite(JSONUtility.readJSON(QA).getUrl());
 	}
 	
 	public LoginPage goToLoginPage() { //Page Functions should return something -- void should not be used

@@ -1,0 +1,19 @@
+2025-06-17 12:53:47 [main] INFO com.ui.listeners.TestListener Test suite started 
+2025-06-17 12:53:59 [main] INFO com.ui.listeners.TestListener loginExcelTest 
+2025-06-17 12:53:59 [main] INFO com.ui.listeners.TestListener Verifies a valid user is able to login in application 
+2025-06-17 12:53:59 [main] INFO com.ui.listeners.TestListener [Sanity, E2E] 
+2025-06-17 12:54:03 [main] WARN com.ui.listeners.TestListener loginExcelTest SKIPPED 
+2025-06-17 12:54:13 [main] INFO com.ui.listeners.TestListener loginExcelTest 
+2025-06-17 12:54:13 [main] INFO com.ui.listeners.TestListener Verifies a valid user is able to login in application 
+2025-06-17 12:54:13 [main] INFO com.ui.listeners.TestListener [Sanity, E2E] 
+2025-06-17 12:54:17 [main] WARN com.ui.listeners.TestListener loginExcelTest SKIPPED 
+2025-06-17 12:54:27 [main] INFO com.ui.listeners.TestListener loginExcelTest 
+2025-06-17 12:54:27 [main] INFO com.ui.listeners.TestListener Verifies a valid user is able to login in application 
+2025-06-17 12:54:27 [main] INFO com.ui.listeners.TestListener [Sanity, E2E] 
+2025-06-17 12:54:30 [main] WARN com.ui.listeners.TestListener loginExcelTest SKIPPED 
+2025-06-17 12:54:42 [main] INFO com.ui.listeners.TestListener loginExcelTest 
+2025-06-17 12:54:42 [main] INFO com.ui.listeners.TestListener Verifies a valid user is able to login in application 
+2025-06-17 12:54:42 [main] INFO com.ui.listeners.TestListener [Sanity, E2E] 
+2025-06-17 12:54:46 [main] ERROR com.ui.listeners.TestListener loginExcelTest FAILED 
+2025-06-17 12:54:46 [main] ERROR com.ui.listeners.TestListener expected [Saswata Bhattacharya1] but found [Saswata Bhattacharya] 
+2025-06-17 12:54:46 [main] INFO com.ui.listeners.TestListener Test suite completed 
