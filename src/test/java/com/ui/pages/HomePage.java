@@ -20,10 +20,14 @@ public final class HomePage extends BrowserUtility{
 	
 	public HomePage(Browser browserName, boolean isHeadless) {
 		super(browserName, isHeadless);
-		//goToWebsite(readProperty(QA, "URL"));
 		goToWebsite(JSONUtility.readJSON(QA).getUrl());
 	}
 	
+	public HomePage(WebDriver driver) {
+		super(driver);
+		goToWebsite(JSONUtility.readJSON(QA).getUrl());
+	}
+
 	public LoginPage goToLoginPage() {
 		//Page Functions should return something -- void should not be used
 		logger.info("Trying to perform clickto go to Sign in page");
@@ -31,6 +35,13 @@ public final class HomePage extends BrowserUtility{
 		LoginPage loginPage = new LoginPage(getDriver());
 		return loginPage;
 		
+	}
+
+	public static void quit() {
+		// TODO Auto-generated method stub
+		if(driver!=null) {
+			driver.get().quit();
+		}
 	}
 
 }

@@ -25,7 +25,7 @@ import com.constants.Browser;
 
 public abstract class BrowserUtility {
 
-	private static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
+	protected static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
 	Logger logger = LoggerUtility.getLogger(this.getClass());
 
 	public WebDriver getDriver() {
@@ -37,44 +37,6 @@ public abstract class BrowserUtility {
 		this.driver.set(driver); // initialise instance variable driver!!
 	}
 
-	public BrowserUtility(String browserName) {
-		logger.info("Launching browser for " + browserName);
-
-		if (browserName.equalsIgnoreCase("chrome")) {
-			driver.set(new ChromeDriver());
-		}
-
-		else if (browserName.equalsIgnoreCase("edge")) {
-			driver.set(new EdgeDriver());
-		}
-
-		else if (browserName.equalsIgnoreCase("firefox")) {
-			driver.set(new FirefoxDriver());
-		}
-
-		else if (browserName.equalsIgnoreCase("safari")) {
-			driver.set(new SafariDriver());
-		}
-	}
-
-//	public BrowserUtility(Browser browserName) {
-//		if (browserName == Browser.CHROME) {
-//			driver.set(new ChromeDriver());
-//		} else if (browserName == Browser.EDGE) {
-//			driver.set(new EdgeDriver());
-//		}
-//
-//		else if (browserName == Browser.FIREFOX) {
-//			driver.set(new FirefoxDriver());
-//		}
-//
-//		else if (browserName == Browser.SAFARI) {
-//			driver.set(new SafariDriver());
-//		} else {
-//			logger.error("Invalid browser value!! Input correct browser value....");
-//			System.err.print("Invalid browser value!! Input correct browser value....");
-//		}
-//	}
 
 	public BrowserUtility(Browser browserName, boolean isHeadless) {
 		if (browserName == Browser.CHROME) {
