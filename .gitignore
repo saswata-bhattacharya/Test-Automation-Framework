@@ -3,4 +3,6 @@ test-output/
 /screenshots/
 /logs/
 /report.html
-/src/
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
