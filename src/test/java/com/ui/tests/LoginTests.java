@@ -15,18 +15,14 @@ import com.ui.pojo.User;
 import com.utility.LoggerUtility;
 
 @Listeners ({com.ui.listeners.TestListener.class})
-public class LoginTests {
+public class LoginTests extends TestBase {
 
-	HomePage homePage;
+	Logger logger = LoggerUtility.getLogger(this.getClass());
 	
-	
-	@BeforeMethod(description = "Load HomePage of the application")
-	public void setUp() {
-		homePage = new HomePage(CHROME);
-	}
 
 	@Test(description = "Verifies a valid user is able to login in application", groups = { "E2E",
-			"Sanity" }, dataProviderClass = com.ui.dataproviders.LoginDataProvider.class, dataProvider = "LoginTestDataProvider")
+			"Sanity" }, dataProviderClass = com.ui.dataproviders.LoginDataProvider.class, dataProvider = "LoginTestDataProvider", 
+			retryAnalyzer = com.ui.listeners.MyRetryAnalyzer.class)
 	public void loginTest(User user) {
 
 		assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress(), user.getPassword()).getUserName(),
