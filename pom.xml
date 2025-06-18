@@ -18,11 +18,20 @@
 					<suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
-					 <systemPropertyVariables>
-           	 				<browser>chrome</browser>
-           	 				<isLambdaTest>false</isLambdaTest>
-           	 				<isHeadless>true</isHeadless> 	 				
-          </systemPropertyVariables>
+					<systemPropertyVariables>
+						<browser>chrome</browser>
+						<isLambdaTest>false</isLambdaTest>
+						<isHeadless>true</isHeadless>
+					</systemPropertyVariables>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.14.0</version>
+				<configuration>
+					<source>11</source>
+					<target>11</target>
 				</configuration>
 			</plugin>
 		</plugins>
